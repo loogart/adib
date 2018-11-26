@@ -8676,6 +8676,7 @@ nav#scrollit .nav-pills .show > .nav-link {
 .adibotron .impressum {
   border: 1px solid #fff;
   padding: 1em 2em;
+  background: rgba(0, 0, 0, 0.8);
 }
 .adibotron .impressum p {
   margin-bottom: 0;
@@ -8777,11 +8778,72 @@ section#billets {
 section#billets h2 {
   border-color: #50E3C2;
 }
-section#billets .billet {
+section#billets .billet-template {
+  display: flex;
+  padding: 1em 1.25em;
+  background-image: url("./img/billet-template.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   transition: all 0.25s ease;
 }
-section#billets .billet:hover {
+section#billets .billet-template:hover {
   transform: translateY(-10px) rotate(10deg);
+}
+@media (max-width: 767px) {
+  section#billets .billet-template {
+    padding: 20px 40px;
+    background-size: 90%;
+  }
+}
+section#billets .billet-template a.billet {
+  background-color: #50E3C2;
+  min-height: 50px;
+  width: 100%;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #000000;
+  border-radius: 1em;
+}
+section#billets .billet-template a.billet .number,
+section#billets .billet-template a.billet .detail {
+  width: 15%;
+  transform: rotate(90deg);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+section#billets .billet-template a.billet .location-date {
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+  border-left: 3px solid #000000;
+  border-right: 3px solid #000000;
+  padding: 0.5em 0;
+}
+section#billets .billet-template a.billet .location-date h3 {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 0.1em;
+}
+section#billets .billet-template a.billet .location-date h4 {
+  font-size: 0.8em;
+  font: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+}
+section#billets .billet-template a.billet .location-date p {
+  font-size: 0.7em;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   section#billets {

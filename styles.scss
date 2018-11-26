@@ -24,7 +24,8 @@ body {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    background-color: $noirpur!important;
+    background-color: $noirpur !important;
+
     &::-webkit-scrollbar {
         display: none;
     }
@@ -210,6 +211,7 @@ nav#scrollit {
     .impressum {
         border: 1px solid #fff;
         padding: 1em 2em;
+        background: rgba(0, 0, 0, 0.8);
 
         p {
             margin-bottom: 0;
@@ -327,13 +329,82 @@ section#billets {
         border-color: $turquoise;
     }
 
-    .billet {
+    .billet-template {
+        display: flex;
+        padding: 1em 1.25em;
+        background-image: url('./img/billet-template.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
         transition: all 0.25s ease;
 
         &:hover {
             transform: translateY(-10px) rotate(10deg);
         }
+
+        @media(max-width:767px) {
+            padding: 20px 40px;
+            background-size: 90%;
+        }
+
+        a.billet {
+            background-color: $turquoise;
+            min-height: 50px;
+            width: 100%;
+            position: relative;
+            color: $noirpur;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            border: 3px solid $noirpur;
+            border-radius: 1em;
+
+
+            .number,
+            .detail {
+                width: 15%;
+                transform: rotate(90deg);
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 1.5em;
+                margin-bottom: 1.5em;
+            }
+
+            .location-date {
+                text-align: center;
+                justify-content: center;
+                width: 70%;
+                border-left: 3px solid $noirpur;
+                border-right: 3px solid $noirpur;
+                padding: 0.5em 0;
+
+                h3 {
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    margin-bottom: 0.1em;
+                }
+
+                h4 {
+                    font-size: 0.8em;
+                    font: 500;
+                    text-transform: uppercase;
+                    margin-bottom: 0.2em;
+                }
+
+                p {
+                    font-size: 0.7em;
+                    margin-bottom: 0;
+                }
+            }
+
+        }
     }
+
 
     @media(max-width: 767px) {
         background-attachment: scroll;
@@ -399,8 +470,9 @@ section#contacter {
     background-size: cover;
     min-height: 40vh;
     padding-bottom: 0;
-    a{
-        color:$noirpur;
+
+    a {
+        color: $noirpur;
         font-weight: 500;
         text-decoration: underline;
     }
@@ -421,9 +493,9 @@ footer {
     h4 {
         color: $turquoise;
     }
-    
-    hr{
-        border-color:$turquoise;
+
+    hr {
+        border-color: $turquoise;
         margin: 2em auto;
     }
 

@@ -20,6 +20,12 @@ $noirpur: #000000;
 main {
     height: 100vh;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 section {
@@ -81,11 +87,12 @@ ul.nav.nav-pills {
                 margin: 0;
             }
         }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
-    .scroll::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 
@@ -230,9 +237,9 @@ section#specials {
 
 }
 
-section#billets{
+section#billets {
     background-image: url('./img/wood-grain-background.jpg');
-    background-size:70%;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: 100% 50%;
 }
@@ -249,7 +256,8 @@ section#billets{
     background-repeat: no-repeat;
     background-position: 90%;
     filter: grayscale(1) contrast(0.5) brightness(0.5);
-    @media(max-width:767px){
+
+    @media(max-width: 767px) {
         display: none;
     }
 }

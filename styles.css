@@ -9,6 +9,11 @@
 main {
   height: 100vh;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+main::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -61,8 +66,7 @@ ul.nav.nav-pills a {
   ul.nav.nav-pills li.nav-item a.nav-linkbrand {
     margin: 0;
   }
-
-  .scroll::-webkit-scrollbar {
+  ul.nav.nav-pills::-webkit-scrollbar {
     display: none;
   }
 }

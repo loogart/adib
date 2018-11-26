@@ -8902,7 +8902,9 @@ section#contacter {
   background-position: center 0;
   background-size: cover;
   min-height: 40vh;
-  padding-bottom: 0;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
 }
 section#contacter a {
   color: #000000;
@@ -8912,6 +8914,8 @@ section#contacter a {
 @media (max-width: 767px) {
   section#contacter {
     min-height: 100vh;
+    padding-bottom: 0;
+    display: block;
   }
 }
 

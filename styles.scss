@@ -1,0 +1,154 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900');
+
+/* 1. import only the necessary Bootstrap files */
+@import "scss/functions";
+@import "scss/variables";
+
+/* 2. begin customization ---- */
+$font-family-sans-serif: 'Nunito Sans',
+sans-serif;
+$theme-colors: ("turquoise":#50E3C2, "noirpur":#000);
+$colors: ("turquoise":#50E3C2, "noirpur":#000);
+$turquoise: #50E3C2;
+$noirpur: #000000;
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+section {
+    padding-top: 4em;
+}
+
+ul.nav.nav-pills {
+    a {
+        color: #fff;
+    }
+}
+
+
+
+@media(max-width:767px) {
+    #scrollit.navbar {
+        width: 100%;
+
+        a.navbar-brand {
+            width: 10%;
+            font-size: 1em;
+            border-bottom:2px solid $turquoise;
+        }
+    }
+
+    ul.nav.nav-pills {
+        width: 80%;
+        display: inline-block;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+
+        li.nav-item {
+            display: inline-block;
+            a.nav-linkbrand{
+            margin:0;}
+        }
+    }
+
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+
+/* --- end customization ------ */
+
+/* 3. import Bootstrap to set the changes! */
+@import "scss/bootstrap";
+
+/* 4. add @mixin or @extend customizations here */
+/* create new custom classes from existing classes */
+
+
+.row-dark {
+    @extend .row;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* use @mixins */
+.btn-custom {
+    @include button-variant($turquoise, white, $turquoise, $turquoise);
+}
+
+nav#scrollit {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    a {
+        color: #fff;
+    }
+
+    .nav-pills {
+        .nav-link {
+            border-radius: 0;
+            border-bottom: 4px solid transparent;
+        }
+
+        .nav-link.active,
+        .show > .nav-link {
+            background-color: transparent;
+            border-bottom: 4px solid $turquoise;
+
+        }
+
+        @media(max-width:767px) {
+            .nav-link {
+                border-radius: 0;
+                border-bottom: none;
+            }
+
+            .nav-link.active,
+            .show > .nav-link {
+                background-color: transparent;
+                color:$turquoise;
+                border-bottom: none;
+
+            }
+        }
+    }
+}
+
+.adibotron {
+    background-image: url('./img/adib-backstage-grayscale.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    color:#fff;
+//    filter: grayscale(1) contrast(1.6);
+    min-height:80vh;
+    display: flex;
+    align-items: center;
+    padding-top:5em;
+    padding-bottom:2em;
+    @media(max-width:767px){
+        background-position: right;
+    }
+}
+
+.turquoise{
+    color:$turquoise;
+}
+
+.intro {
+    background-image: url('./img/mur-briques.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  top;
+    filter: grayscale(1);
+    .embed-responsive{
+        border-bottom: 4px solid $turquoise;
+    }
+}

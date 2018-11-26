@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900");
 /* 1. import only the necessary Bootstrap files */
 /* 2. begin customization ---- */
+.turquoise {
+  color: #50E3C2 !important;
+}
+
 main {
   height: 100vh;
   overflow-y: scroll;
@@ -9,6 +13,23 @@ main {
 
 section {
   padding-top: 4em;
+  padding-bottom: 4em;
+}
+section h2 {
+  font-weight: 700;
+  font-size: 3em;
+  padding-left: 0.4em;
+  margin-bottom: 0.5em;
+  border-left: 10px solid;
+}
+section p {
+  margin-bottom: 2em;
+  font-weight: 500;
+}
+section h3 {
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 ul.nav.nav-pills a {
@@ -22,7 +43,7 @@ ul.nav.nav-pills a {
   #scrollit.navbar a.navbar-brand {
     width: 10%;
     font-size: 1em;
-    border-bottom: 2px solid #50E3C2;
+    border-bottom: 2px solid #50E3C2 !important;
   }
 
   ul.nav.nav-pills {
@@ -8601,37 +8622,101 @@ nav#scrollit .nav-pills .show > .nav-link {
   }
 }
 
+.container {
+  max-width: 800px;
+}
+
 .adibotron {
   background-image: url("./img/adib-backstage-grayscale.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center 69%;
   color: #fff;
   min-height: 80vh;
   display: flex;
   align-items: center;
   padding-top: 5em;
-  padding-bottom: 2em;
+  padding-bottom: 5em;
+}
+.adibotron h1 {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 0.7;
+  margin-bottom: 0.69em;
 }
 @media (max-width: 767px) {
   .adibotron {
     background-position: right;
   }
-}
-
-.turquoise {
-  color: #50E3C2;
+  .adibotron h1 {
+    font-size: 3em;
+  }
 }
 
 .intro {
-  background-image: url("./img/mur-briques.jpg");
+  background-image: url("./img/mur-briques-grayscale.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  filter: grayscale(1);
 }
-.intro .embed-responsive {
-  border-bottom: 4px solid #50E3C2;
+.intro .container {
+  margin-top: -86px;
+}
+.intro .embed-responsive-item {
+  border-bottom: 6px solid #50E3C2;
+  padding-bottom: 25px;
+}
+
+section#specials {
+  background-color: #000000;
+  color: #fff;
+  position: relative;
+}
+section#specials h2 {
+  border-color: #50E3C2;
+}
+section#specials .item {
+  margin-bottom: 3em;
+}
+section#specials .item h3 {
+  color: #50E3C2;
+}
+section#specials .item img.special {
+  margin-bottom: 2em;
+  transition: all 0.25s ease;
+}
+section#specials .item img.special:hover {
+  transform: translateY(-10px);
+}
+section#specials .badge {
+  max-width: 150px;
+  display: block;
+}
+
+section#billets {
+  background-image: url("./img/wood-grain-background.jpg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.cool-bar {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 69%;
+  background-image: url("./img/wood-grain-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  filter: grayscale(1) contrast(0.5) brightness(0.5);
+}
+@media (max-width: 767px) {
+  .cool-bar {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

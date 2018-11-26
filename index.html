@@ -9,6 +9,22 @@
 
     <title>Adib Alkhalidey</title>
 
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="./img/favicon.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Adib Alkhalidey">
+    <link rel="apple-touch-icon-precomposed" href="./img/favicon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="./img/favicon.png">
+    <meta name="msapplication-TileColor" content="#50E3C2">
+    <link rel="shortcut icon" href="./img/favicon.png">
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#50E3C2">
+    <meta name="theme-color" content="#50E3C2">
 </head>
 
 <body>
@@ -45,12 +61,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 mb-5">
-                        <h1>Adib <br class="d-none d-sm-block"><span class="turquoise">Alkhalidey</span></h1>
+                        <h1>Adib <br><span class="turquoise ml-3">Alkhalidey</span></h1>
                         <p>Créateur de blagues. Photographe montréalais. Cinéaste et producteur. Expert en Mario Kart. Adib. Al-kha-li-déééé. ok.</p>
-                        <a class="btn btn-custom" href="#" role="button">Billets</a>
+                        <a class="btn btn-outline-light btn-lg" href="#" role="button">Billets</a>
                     </div>
                     <div class="col-sm-12">
-                        <p class="small" style="border:1px solid #fff;padding:1em 2em">Dès sa sortie de l’École nationale de l’humour, Adib Alkhalidey travaille autant sur scène que dans les coulisses à titre d’auteur. Il enchaîne un projet après l’autre, puis, en 2013, après avoir été encensé par la critique, il parcourt la province du Québec pour y présenter son tout premier one-man show, Je t’aime. Après le succès de ce premier spectacle solo, il nous revient cette année, en force, avec son deuxième spectacle intitulé Ingénu.</p>
+                        <p class="small" style="border:1px solid #fff;padding:1em 2em"><strong>Impressum:</strong> Dès sa sortie de l’École nationale de l’humour, Adib Alkhalidey travaille autant sur scène que dans les coulisses à titre d’auteur. Il enchaîne un projet après l’autre, puis, en 2013, après avoir été encensé par la critique, il parcourt la province du Québec pour y présenter son tout premier one-man show, Je t’aime. Après le succès de ce premier spectacle solo, il nous revient cette année, en force, avec son deuxième spectacle intitulé Ingénu.</p>
                     </div>
                 </div>
             </div>
@@ -59,7 +75,7 @@
             <div class="container">
                 <div class="mx-auto">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" width="100%" height="315" src="https://www.youtube.com/embed/bFUPbSS8Afs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -67,35 +83,39 @@
         <section id="specials">
             <div class="container">
                 <h2>Specials</h2>
-                <p>Comme dans son humour, Adib est un communicateur habile dans le domaine visuel de la photographie. Il réussit à faire ressortir certains éléments d’une scène sans réduire les autres items de sa composition. Achetez des prints originaux photographiés par l’oeil d’Adib et imprimés localement à #MTL.</p>
+                <p>Visionnes Adib Alkhalidey dans ses 3 specials. Je t'aime en 2014, Ingénu en 2017 et sur Netflix en 2019.</p>
 
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-jetaime_small.jpg" class="img-fluid" alt="">
+                            <img src="./img/special-jetaime_small.jpg" class="img-fluid special" alt="">
                             <h3>Je t'aime</h3>
                             <h4>2014</h4>
                             <p>Premier spectacle solo d’Adib monté en collaboration avec Martin Matte.</p>
+                            <a href="#!" target="_blank"><img class="badge" src="./img/badge-appstore.svg" alt="télécharger sur l'App Store"></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-ingenu_small.jpg" class="img-fluid" alt="">
-                            <h3>Je t'aime</h3>
-                            <h4>2014</h4>
-                            <p>Premier spectacle solo d’Adib monté en collaboration avec Martin Matte.</p>
+                            <img src="./img/special-ingenu_small.jpg" class="img-fluid special" alt="">
+                            <h3>Ingénu</h3>
+                            <h4>2017</h4>
+                            <p>Deuxième spectacle solo d’Adib monté et produit par lui-même.</p>
+                            <a href="#!" target="_blank"><img class="badge" src="./img/badge-youtube.svg" alt="Visionner sur Youtube"></a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-netflix.jpg" class="img-fluid" alt="">
-                            <h3>Je t'aime</h3>
-                            <h4>2014</h4>
-                            <p>Premier spectacle solo d’Adib monté en collaboration avec Martin Matte.</p>
+                            <img src="./img/special-netflix.jpg" class="img-fluid special" alt="">
+                            <h3>Netflix</h3>
+                            <h4>2019</h4>
+                            <p>Spécial Netflix qui met en vedette Adib, comédien 2, comédien 3, etc.</p>
+                            <a href="#!" target="_blank"><img class="badge" src="./img/badge-netflix.svg" alt="Visionner sur Netflix"></a>
                         </div>
                     </div>
                 </div>
             </div>
+            <span class="cool-bar"></span>
         </section>
         <section id="billets">
             <div class="container">
@@ -103,22 +123,22 @@
                 <p>Achetez vos billets en ligne pour les prochains shows d’Adib.!</p>
                 <div class="row">
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="#!" target="_blank"><img class="" src="" alt=""></a>
+                        <a href="#!" target="_blank"><img class="img-fluid" src="./img/billet-test.svg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -133,7 +153,7 @@
                         <a class="btn btn-outline-primary" href="#" role="button">Mon ami Walid</a>
                     </div>
                     <div class="col-sm-6">
-                        <img src="" alt="">
+                        <img class="img-fluid" src="./img/poster-mon-ami-walid.jpg" alt="poster du film Mon Ami Walid">
                     </div>
                 </div>
             </div>
@@ -168,12 +188,14 @@
             </div>
         </section>
     </main>
+
     <footer>
 
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

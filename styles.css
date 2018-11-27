@@ -8749,6 +8749,11 @@ section#specials h2 {
 section#specials .item {
   margin-bottom: 3em;
 }
+@media (max-width: 767px) {
+  section#specials .item {
+    padding: 1.5em;
+  }
+}
 section#specials .item h3 {
   color: #50E3C2;
 }
@@ -8786,6 +8791,7 @@ section#billets .billet-template {
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.25s ease;
+  transform-style: preserve-3d;
 }
 section#billets .billet-template:hover {
   transform: translateY(-10px) rotate(10deg);

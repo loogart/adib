@@ -291,6 +291,10 @@ section#specials {
 
     .item {
         margin-bottom: 3em;
+
+        @media(max-width: 767px) {
+            padding: 1.5em;
+        }
     }
 
     .item h3 {
@@ -337,6 +341,7 @@ section#billets {
         background-position: center;
         background-repeat: no-repeat;
         transition: all 0.25s ease;
+        transform-style: preserve-3d;
 
         &:hover {
             transform: translateY(-10px) rotate(10deg);

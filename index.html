@@ -96,7 +96,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-jetaime_small.jpg" class="img-fluid special" alt="">
+                            <img src="./img/special-jetaime_small.jpg" class="img-fluid special" alt="" data-tilt>
                             <h3>Je t'aime</h3>
                             <h4>2014</h4>
                             <p>Premier spectacle solo d’Adib monté en collaboration avec Martin Matte.</p>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-ingenu_small.jpg" class="img-fluid special" alt="">
+                            <img src="./img/special-ingenu_small.jpg" class="img-fluid special" alt="" data-tilt>
                             <h3>Ingénu</h3>
                             <h4>2017</h4>
                             <p>Deuxième spectacle solo d’Adib monté et produit par lui-même.</p>
@@ -114,7 +114,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <div class="item">
-                            <img src="./img/special-netflix.jpg" class="img-fluid special" alt="">
+                            <img src="./img/special-netflix.jpg" class="img-fluid special" alt="" data-tilt>
                             <h3>Netflix</h3>
                             <h4>2019</h4>
                             <p>Spécial Netflix qui met en vedette Adib, comédien 2, comédien 3, etc.</p>
@@ -221,7 +221,7 @@
                         <a class="btn btn-outline-light btn-lg" href="https://monamiwalid.ca/" target="_blank" role="button">Mon ami Walid</a>
                     </div>
                     <div class="col-sm-6 mb-5 mb-sm-0">
-                        <a href="https://monamiwalid.ca/" target="_blank"><img class="img-fluid poster" src="./img/poster-mon-ami-walid.jpg" alt="poster du film Mon Ami Walid"></a>
+                        <a href="https://monamiwalid.ca/" target="_blank"><img class="img-fluid poster" src="./img/poster-mon-ami-walid.jpg" alt="poster du film Mon Ami Walid" data-tilt></a>
                     </div>
                 </div>
             </div>
@@ -357,7 +357,39 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/scrollreveal.min.js"></script>
+    <script src="./js/tilt.jquery.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.special', {
+            duration: 1000,
+            interval: 250,
+            opacity: 0.25,
+            origin: 'top',
+            desktop: true,
+            mobile: true,
+        });
+        ScrollReveal().reveal('.billet-template', {
+            easing: 'cubic-bezier(0.5, 1, 0.5, 2)',
+            interval: 150,
+            opacity: 0.25
+        });
+        ScrollReveal().reveal('.poster', {
+            delay: 500,
+            opacity: 0.25,
+            duration: 1500,
+            origin: 'top'
+        });
+        const special = $('.special').tilt({
+            glare: true,
+            perspective: 1500,
+            scale: 1.05,
+        });
+        $('.poster').tilt({
+            glare: true,
+            perspective: 1500
+        })
 
+    </script>
 </body>
 
 </html>

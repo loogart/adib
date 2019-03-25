@@ -8780,8 +8780,8 @@ nav#scrollit .nav-pills .show > .nav-link {
   margin-top: -86px;
 }
 .intro .embed-responsive {
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
 }
 @media (max-width: 767px) {
   .intro {

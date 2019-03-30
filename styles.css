@@ -8721,8 +8721,8 @@ nav#scrollit .nav-pills .show > .nav-link {
 @media (max-width: 767px) {
   .adibotron {
     min-height: 90vh;
-    background-size: 209%;
-    background-position: 79% 100%;
+    background-size: 240%;
+    background-position: 79% 90%;
     align-items: flex-end;
     padding-top: 8rem;
     padding-bottom: 1rem;

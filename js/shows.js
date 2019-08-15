@@ -1,5 +1,5 @@
 $.ajax({
-    url: "https://phaneuf.ca/api/spectacles/julien-lacroix?callback=myJsonpCallback",
+    url: "https://phaneuf.ca/api/spectacles/adib-alkhalidey?callback=myJsonpCallback",
     dataType: "jsonp",
     type: "POST",
     jsonpCallback: 'processJSONPResponse',

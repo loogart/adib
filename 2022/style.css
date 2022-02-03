@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+:root {
+    --offblack: #0b0a0a;
+    --offwhite: #e0d9d7;
+}
+body{
+    background-color: var(--offblack);
+    color:var(--offwhite);
+    font-family: 'Ibarra Real Nova', serif;
+    background-image: url(./img/background.png);
+    background-repeat: repeat;
+    background-size: 25%;
+    padding:1rem;
+}
+
+.border-thin{
+    background-image: url(./img/border-x.png), url(./img/border-x.png), url(./img/border-y.png), url(./img/border-y.png);
+    background-repeat: repeat-x, repeat-x,repeat-y, repeat-y;
+    background-size: 100% 3px, 100% 3px, 3px 100%, 3px 100%;
+    background-position: 0% 0%, 0 100%, 0%, 100%;
+}
+
+.list-item{
+    background-image: url(./img/border-x.png);
+    background-repeat: repeat-x;
+    background-size: 100% 3px;
+    background-position: 0 100%;
+    padding:1.5rem 0;
+}
+
+.text-offwhite, a.text-offwhite{
+    color:var(--offwhite);
+}

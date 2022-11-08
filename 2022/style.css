@@ -32,3 +32,16 @@ body{
 .text-offwhite, a.text-offwhite{
     color:var(--offwhite);
 }
+
+.box-alkld {
+    transition: all ease-in-out .25s;    
+}
+
+.box-alkld:hover, .box-alkld:active {
+    transform: scale(.99);
+}
+
+a:hover, a:active{
+    opacity: .8;      
+
+}

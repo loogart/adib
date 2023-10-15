@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --adib-green: #2C674B;
     --adib-orange: #FF653F;
+    --adib-gold: #f0bc77;
+    --adib-black: #161716;
 }
 body{
     background-color: var(--adib-green);
     color:white;
     font-family: 'Ibarra Real Nova', serif;
     line-height: .9;
+}
+
+body.yas{
+    line-height: 1.1;
+}
+
+section{
+    overflow: hidden;
+}
+
+.text-gold{
+    color: var(--adib-gold)!important;
 }
 
 .text-adib-orange{
@@ -19,10 +33,24 @@ body{
     color: var(--adib-green);
 }
 
+.hero-background-1{
+    background-image: url(./img/hero-site.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 h1{
     font-size: 6rem;
     letter-spacing: -.67rem;
     line-height: .5;
+}
+
+.h1-gold{
+    font-size: 4rem;
+    letter-spacing:0rem;
+    line-height: 1;
+    color: var(--adib-gold);
 }
 
 h2{
@@ -38,6 +66,16 @@ span.logo{
     line-height: .6;
 }
 
+span.logo-gold{
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    line-height: .6;
+    color:var(--adib-gold);
+    font-weight: light;
+
+
+}
+
 .hero-cover{
     width:100%;
     height:369px;
@@ -50,6 +88,18 @@ span.logo{
   41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
   100px 100px 80px rgba(0, 0, 0, 0.07)
 ;
+}
+
+.hero-cover-gold{
+    width:100%;
+    height:469px;
+    object-fit: cover;
+    object-position: top;
+}
+@media (max-width: 768px) {
+    .hero-cover-gold{
+        width:100%;
+    }  
 }
 
 .shadow-special{
@@ -73,6 +123,10 @@ span.logo{
     font-size: 4rem;
     letter-spacing: -7px;
     line-height: .4;
+}
+
+.bg-green{
+    background-color: var(--adib-green);
 }
 
 .image-feature{

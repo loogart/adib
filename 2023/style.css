@@ -5,6 +5,7 @@
     --adib-orange: #FF653F;
     --adib-gold: #f0bc77;
     --adib-black: #161716;
+    --offblack: #0f0f0f;
 }
 body{
     background-color: var(--adib-green);
@@ -127,6 +128,10 @@ span.logo-gold{
 
 .bg-green{
     background-color: var(--adib-green);
+}
+
+.bg-off-black{
+    background-color: var(--offblack);
 }
 
 .image-feature{

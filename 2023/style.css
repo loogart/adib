@@ -141,10 +141,60 @@ span.logo-gold{
 
 }
 
+.quebecois{
+    background-color: var(--offblack);
+    color:var(--offwhite);
+    background-image: url(./img/background-black-grain.png);
+    background-repeat: repeat;
+    background-size: 25%;
+    padding:1rem;
+}
+.border-thin{
+    background-image: url(./img/border-x.png), url(./img/border-x.png), url(./img/border-y.png), url(./img/border-y.png);
+    background-repeat: repeat-x, repeat-x,repeat-y, repeat-y;
+    background-size: 100% 3px, 100% 3px, 3px 100%, 3px 100%;
+    background-position: 0% 0%, 0 100%, 0%, 100%;
+}
+
+.trophy-wrapper{
+    top:50px;
+    right:50px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95) rotateZ(15deg);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1)rotateZ(15deg);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95)rotateZ(15deg);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+.trophy{
+    width:20px;
+}
+
 @media (max-width: 768px) {
     .image-feature{
         height:320px;
         object-fit: cover;
+    }
+    .trophy-wrapper{
+        top:20px;
+        right:20px;
+        transform: rotateZ(15deg);
+    }
+    .trophy{
+        width:12px
     }
 }
 

@@ -92,17 +92,17 @@
                     </div>
                     <div class="col-12 col-md-8">
                         <!-- billet -->
-                        <!--<div class="row justify-content-between py-3 border-bottom" data-aos="fade-up">
+                        <div class="row justify-content-between py-3 border-bottom" data-aos="fade-up" data-date="2023-09-30">
                             <div class="col-8">
-                                <p class="fs-3 mb-2"><i>27 novembre 2024</i></p>
-                                <p class="small"><i>Brossard • Le Club Dix30</i></p>
+                                <p class="fs-3 mb-2"><i>30 septembre 2023</i></p>
+                                <p class="small"><i>salle claude-léveillée</i></p>
                             </div>
                             <div class="col-4 text-end">
-                                <a class="btn btn-lg btn-outline-light" href="https://www.ticketmaster.ca/event/310060A79E38175E?lang=fr-ca" role="button" target="_blank"><i>billets</i></a>
+                                <a class="btn btn-lg btn-outline-light" href="#!" role="button" target="_blank"><i>billets</i></a>
                             </div>
-                        </div>-->
+                        </div>
                         <!-- billet -->
-                        <div class="row justify-content-between py-3" data-aos="fade-up">
+                        <div class="row justify-content-between py-3" data-aos="fade-up" data-date="2024-11-27">
                             <div class="col-8">
                                 <p class="fs-3 mb-2"><i>27 novembre 2024</i></p>
                                 <p class="small"><i>Brossard • Le Club Dix30</i></p>
@@ -271,6 +271,21 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+          /* remove date when over */
+    document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('[data-date]');
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Remove time part
+
+        sections.forEach(section => {
+            const showDate = new Date(section.getAttribute('data-date'));
+            showDate.setDate(showDate.getDate() + 1); // Set to the day after the show
+
+            if (currentDate > showDate) {
+                section.style.display = 'none'; // Hide section
+            }
+        });
+    });
     </script>
   </body>
 </html>

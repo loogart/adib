@@ -194,16 +194,6 @@ span.logo-gold{
     width:20px;
 }
 
-.grid-projets{
-    display: grid;
-   grid-template-areas:
-    "item-a item-a item-a item-b"
-    "item-c item-c item-d item-d";
-    gap: 20px;
-}
-
-
-
 
 @media (max-width: 768px) {
     .image-feature{

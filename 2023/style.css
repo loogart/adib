@@ -115,7 +115,7 @@ span.logo-gold{
 
 .album-cover{
     width:100%;
-    height:100%;
+    height:300px;
     object-fit: cover;
 }
 
@@ -148,6 +148,7 @@ span.logo-gold{
     background-size: 25%;
     padding:1rem;
 }
+
 .border-thin{
     background-image: url(./img/border-x.png), url(./img/border-x.png), url(./img/border-y.png), url(./img/border-y.png);
     background-repeat: repeat-x, repeat-x,repeat-y, repeat-y;
@@ -159,6 +160,17 @@ span.logo-gold{
     top:50px;
     right:50px;
     animation: pulse 1s infinite;
+}
+
+
+.des-putes{
+    background-color: var(--offblack);
+    color:var(--offwhite);
+    background-image: url(./img/des-putes-et-des-voleurs.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top:200px;
+    padding-bottom:200px;
 }
 
 @keyframes pulse {
@@ -182,6 +194,17 @@ span.logo-gold{
     width:20px;
 }
 
+.grid-projets{
+    display: grid;
+   grid-template-areas:
+    "item-a item-a item-a item-b"
+    "item-c item-c item-d item-d";
+    gap: 20px;
+}
+
+
+
+
 @media (max-width: 768px) {
     .image-feature{
         height:320px;
@@ -195,6 +218,13 @@ span.logo-gold{
     .trophy{
         width:12px
     }
+    .des-putes{
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    .grid-projets{
+    }
+
 }
 
 .logo-sponsor{

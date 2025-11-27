@@ -65,9 +65,10 @@ h2{
 }
 
 span.logo{
-    font-size: 3rem;
-    letter-spacing: -4px;
+    font-size: 2rem;
+    letter-spacing: -2px;
     line-height: .6;
+    font-weight: 300;
 }
 
 span.logo-gold{

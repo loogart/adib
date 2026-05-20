@@ -37,6 +37,15 @@ section{
     color: var(--adib-green);
 }
 
+.btn-sale-date{
+    white-space: normal;
+    line-height: 1;
+}
+
+.scheduled-ticket{
+    display: none;
+}
+
 .hero-background-1{
     background-image: url(./img/hero-site.jpg);
     background-size: cover;

@@ -6,15 +6,21 @@
     --adib-gold: #f0bc77;
     --adib-black: #161716;
     --offblack: #0f0f0f;
-    --plexus-blue:#20194C;
-    --plexus-baby-blue:#40B2F5;
+    --site-background: #170A0E;
+    --site-text: #FFB287;
+    --site-highlight: #EF6F22;
+    --site-gradient: linear-gradient(90deg, #D05A1C 0%, #3C0500 52%, #170A0E 100%);
+    --plexus-blue: var(--site-background);
+    --plexus-baby-blue: var(--site-highlight);
 
 }
 body{
-    background-color: var(--plexus-blue);
-    color:white;
+    background-color: var(--site-background);
+    color: var(--site-text);
     font-family: 'Ibarra Real Nova', serif;
     line-height: .9;
+    border-top: 4px solid transparent;
+    border-image: var(--site-gradient) 1;
 }
 
 body.yas{
@@ -26,11 +32,11 @@ section{
 }
 
 .text-gold{
-    color: var(--adib-gold)!important;
+    color: var(--site-text)!important;
 }
 
 .text-adib-orange{
-    color: var(--adib-orange);
+    color: var(--site-highlight);
 }
 
 .text-adib-green{
@@ -57,13 +63,14 @@ h1{
     font-size: 6rem;
     letter-spacing: -.67rem;
     line-height: .5;
+    color: var(--site-text);
 }
 
 .h1-gold{
     font-size: 4rem;
     letter-spacing:0rem;
     line-height: 1;
-    color: var(--adib-gold);
+    color: var(--site-text);
 }
 
 h2{
@@ -71,6 +78,7 @@ h2{
     letter-spacing: -2px;
     line-height: .7; 
     font-style: italic;  
+    color: var(--site-highlight);
 }
 
 span.logo{
@@ -78,13 +86,14 @@ span.logo{
     letter-spacing: -2px;
     line-height: .6;
     font-weight: 300;
+    color: var(--site-text);
 }
 
 span.logo-gold{
     font-size: 1.5rem;
     letter-spacing: -1px;
     line-height: .6;
-    color:var(--adib-gold);
+    color:var(--site-text);
     font-weight: light;
 
 
@@ -143,7 +152,7 @@ span.logo-gold{
 }
 
 .bg-off-black{
-    background-color: var(--offblack);
+    background-color: var(--site-background);
 }
 
 .image-feature{
@@ -240,4 +249,33 @@ span.logo-gold{
 footer{
     line-height: 1.1;
     letter-spacing: 0;
+    background-image: linear-gradient(180deg, rgba(208, 90, 28, .28) 0, rgba(60, 5, 0, .24) 38px, rgba(23, 10, 14, 0) 120px);
+    color: var(--site-text);
+}
+
+body .text-white,
+body .text-light,
+body .btn-outline-light {
+    color: var(--site-text)!important;
+}
+
+body .border-top {
+    border-color: rgba(255, 178, 135, .38)!important;
+}
+
+body .btn-light {
+    background-color: var(--site-text);
+    border-color: var(--site-text);
+    color: var(--site-background);
+}
+
+body .btn-outline-light {
+    border-color: var(--site-text);
+}
+
+body .btn-outline-light:hover,
+body .btn-outline-light:focus {
+    background-color: var(--site-highlight);
+    border-color: var(--site-highlight);
+    color: var(--site-background)!important;
 }

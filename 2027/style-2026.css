@@ -1,0 +1,768 @@
+/* Retouches 2026 : distinction, liste des dates, infolettre.
+   S'ajoute après style.css, sans le modifier. */
+
+/* ---------- Distinction ---------- */
+.distinction {
+    padding: 0 0 3.5rem;
+}
+.distinction-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    color: var(--site-text);
+}
+.distinction .laurier {
+    width: 54px;
+    height: 96px;
+    color: var(--site-highlight);
+    flex-shrink: 0;
+}
+.distinction-texte {
+    text-align: center;
+}
+.distinction-titre {
+    margin: 0;
+    font-style: italic;
+    font-size: 2.4rem;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+.distinction-source {
+    margin: .55rem 0 0;
+    font-size: .8rem;
+    line-height: 1;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    opacity: .8;
+}
+
+/* ---------- Liste des dates ---------- */
+.ticket-groupe + .ticket-groupe {
+    margin-top: 2.25rem;
+}
+.ticket-mois {
+    margin: 0 0 .6rem;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    line-height: 1;
+}
+.ticket {
+    line-height: 1.15;
+}
+.ticket-jour {
+    font-size: 1rem;
+    opacity: .85;
+}
+.ticket-ville {
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+}
+.ticket-salle {
+    font-size: .95rem;
+    opacity: .7;
+}
+.ticket-tag {
+    display: inline-block;
+    margin-left: .6rem;
+    padding: .15rem .5rem;
+    border: 1px solid rgba(255, 178, 135, .45);
+    border-radius: 999px;
+    font-size: .68rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    vertical-align: .15em;
+}
+.ticket-tag-chaud {
+    border-color: var(--site-highlight);
+    color: var(--site-highlight);
+}
+.ticket-btn {
+    padding: .5rem 1.3rem;
+    font-size: 1.15rem;
+}
+.ticket-complet {
+    display: inline-block;
+    padding: .5rem 1.1rem;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--site-text);
+    opacity: .55;
+    border: 1px dashed rgba(255, 178, 135, .4);
+    border-radius: .375rem;
+}
+.ticket-est-complet .ticket-ville,
+.ticket-est-complet .ticket-jour,
+.ticket-est-complet .ticket-salle {
+    opacity: .5;
+}
+
+/* Supplémentaires au Maisonneuve, en tête */
+.ticket-vedette {
+    padding: 1.6rem 1.4rem .6rem;
+    border-radius: .5rem;
+    background: linear-gradient(135deg, rgba(239, 111, 34, .16) 0%, rgba(60, 5, 0, .25) 60%, rgba(23, 10, 14, 0) 100%);
+    box-shadow: inset 0 0 0 1px rgba(255, 178, 135, .28);
+}
+.ticket-vedette-kicker {
+    margin: 0 0 .5rem;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    line-height: 1;
+}
+.ticket-vedette-titre {
+    margin: 0 0 .9rem;
+    font-style: italic;
+    font-size: 2.3rem;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+.ticket-vedette-titre span {
+    display: block;
+    font-size: 1.3rem;
+    letter-spacing: -.5px;
+    opacity: .8;
+    margin-top: .3rem;
+}
+.ticket-vedette .ticket-tag {
+    display: none;
+}
+.ticket-vedette .ticket-btn {
+    background: var(--site-text);
+    color: var(--site-background) !important;
+}
+.ticket-vedette .ticket-btn i {
+    color: var(--site-background);
+}
+
+/* ---------- Infolettre ---------- */
+.infolettre h2 {
+    margin-bottom: 1.1rem;
+}
+.infolettre-texte {
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+.infolettre-form {
+    display: flex;
+    gap: .6rem;
+}
+.infolettre-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    padding: .7rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 178, 135, .55);
+    border-radius: .375rem;
+    color: var(--site-text);
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+.infolettre-form input[type="email"]::placeholder {
+    color: var(--site-text);
+    opacity: .55;
+    font-style: italic;
+}
+.infolettre-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--site-highlight);
+}
+.infolettre-form .btn {
+    padding: .7rem 1.4rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* ---------- Téléphone ---------- */
+@media (max-width: 768px) {
+    .distinction { padding-bottom: 2.5rem; }
+    .distinction-inner { gap: .75rem; }
+    .distinction .laurier { width: 32px; height: 56px; }
+    .distinction-titre { font-size: 1.75rem; letter-spacing: -1px; }
+    .distinction-source { font-size: .7rem; }
+    .ticket-ville { font-size: 1.6rem; }
+    .ticket-jour { font-size: .9rem; }
+    .ticket-salle { font-size: .85rem; }
+    .ticket-btn, .ticket-complet { font-size: 1rem; padding: .45rem .9rem; }
+    .ticket-vedette { padding: 1.2rem 1rem .4rem; }
+    .ticket-vedette-titre { font-size: 1.8rem; }
+    .ticket-vedette-titre span { font-size: 1.05rem; }
+    .infolettre-form { flex-direction: column; }
+}
+
+/* ---------- Navigation ---------- */
+.nav-liens {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.4rem;
+}
+.nav-liens a {
+    color: var(--site-text);
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1.15rem;
+}
+.nav-liens a:hover { color: var(--site-highlight); }
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 1rem; }
+
+.section-sous-titre {
+    font-size: 1.2rem;
+    line-height: 1.25;
+    opacity: .85;
+}
+
+/* ---------- Musique ---------- */
+.vedette-pochette img {
+    border-radius: .5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+}
+.vedette-kicker {
+    margin: 0 0 .6rem;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    line-height: 1;
+}
+.vedette-titre {
+    margin: 0 0 1.2rem;
+    font-style: italic;
+    font-size: 4rem;
+    line-height: .95;
+    letter-spacing: -3px;
+}
+.vedette-citation {
+    margin: 0 0 .9rem;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+.vedette-citation span {
+    display: block;
+    margin-top: .3rem;
+    font-style: normal;
+    font-size: .75rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .7;
+}
+.vedette-lecteur { margin-top: 1.4rem; }
+.lecteur-bouton {
+    padding: .7rem 1.5rem;
+    font-size: 1.15rem;
+}
+.album-liens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.musique-btn {
+    padding: .4rem 1rem;
+    font-size: 1rem;
+}
+.album-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.album-titre {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.7rem;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+.album-info {
+    margin: .35rem 0 .9rem;
+    font-size: .95rem;
+    line-height: 1.2;
+    opacity: .7;
+}
+
+/* ---------- Boutique ---------- */
+.boutique-tout {
+    color: var(--site-text);
+    font-size: 1.1rem;
+}
+.boutique-tout:hover { color: var(--site-highlight); }
+.produit {
+    display: block;
+    height: 100%;
+    color: var(--site-text);
+    text-decoration: none;
+}
+.produit:hover { color: var(--site-text); }
+.produit-image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: .5rem;
+    background: #f3eee9;
+    margin-bottom: .8rem;
+}
+.produit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+.produit:hover .produit-image img { transform: scale(1.04); }
+.produit-badge {
+    position: absolute;
+    top: .6rem;
+    left: .6rem;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    background: var(--site-background);
+    color: var(--site-highlight);
+    font-size: .68rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.produit-cat {
+    margin: 0 0 .25rem;
+    font-size: .72rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    line-height: 1;
+}
+.produit-nom {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.1;
+    letter-spacing: -.5px;
+}
+.produit-prix {
+    margin: .3rem 0 0;
+    font-size: 1rem;
+    opacity: .8;
+}
+.produit-fin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 178, 135, .35);
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    padding: 1rem;
+}
+.produit-fin:hover { box-shadow: inset 0 0 0 1px var(--site-highlight); }
+
+/* ---------- Biographie ---------- */
+.bio-texte {
+    font-size: 1.2rem;
+    line-height: 1.45;
+}
+.bio-texte p { margin-bottom: 1.1rem; }
+.bio-suite summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .55rem 1.2rem;
+    border: 1px solid var(--site-text);
+    border-radius: .375rem;
+    font-size: 1.1rem;
+}
+.bio-suite summary::-webkit-details-marker { display: none; }
+.bio-suite summary:hover {
+    background: var(--site-highlight);
+    border-color: var(--site-highlight);
+    color: var(--site-background);
+}
+
+.bio-h3 {
+    margin: 2rem 0 .8rem;
+    font-style: italic;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    color: var(--site-highlight);
+}
+.bio-cat {
+    margin: 1.4rem 0 .4rem !important;
+    font-size: .8rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+}
+.bio-liste {
+    padding-left: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+.bio-liste li { margin-bottom: .35rem; }
+.bio-note { font-size: 1.05rem; opacity: .85; }
+
+@media (max-width: 768px) {
+    .vedette-titre { font-size: 2.8rem; letter-spacing: -2px; }
+    .vedette-citation { font-size: 1.15rem; }
+    .produit-nom { font-size: 1.15rem; }
+    .bio-texte { font-size: 1.08rem; }
+}
+.vedette-citation-grande {
+    font-size: 1.7rem;
+    line-height: 1.15;
+    letter-spacing: -.5px;
+}
+@media (max-width: 768px) {
+    .vedette-citation-grande { font-size: 1.35rem; }
+}
+
+/* ---------- Menu « écouter » par album ---------- */
+.ecouter { position: relative; display: inline-block; }
+.ecouter summary { list-style: none; cursor: pointer; }
+.ecouter summary::-webkit-details-marker { display: none; }
+.ecouter-fleche { font-size: .7em; transition: transform .35s cubic-bezier(.2, .8, .2, 1); }
+.ecouter[open] .ecouter-fleche { transform: rotate(180deg); }
+.ecouter-menu {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + .4rem);
+    left: 0;
+    min-width: 230px;
+    padding: .4rem;
+    border-radius: .5rem;
+    background: #24121a;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 178, 135, .3);
+}
+.ecouter-menu a {
+    display: block;
+    padding: .6rem .8rem;
+    border-radius: .35rem;
+    color: var(--site-text);
+    text-decoration: none;
+    font-size: 1.05rem;
+    line-height: 1.1;
+}
+.ecouter-menu a:hover { background: rgba(239, 111, 34, .18); color: var(--site-text); }
+
+/* ---------- Réseaux sociaux ---------- */
+.sociaux {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+.sociaux a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 178, 135, .45);
+    color: var(--site-text);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.sociaux a:hover {
+    background: var(--site-highlight);
+    border-color: var(--site-highlight);
+    color: var(--site-background);
+}
+.sociaux-haut .sociaux { justify-content: center; }
+@media (min-width: 768px) {
+    .sociaux-haut .sociaux { justify-content: flex-end; }
+}
+.sociaux-pied { justify-content: center; }
+@media (min-width: 768px) {
+    .sociaux-pied { justify-content: flex-start; }
+}
+/* Le site coupe ce qui dépasse des sections (style.css) : on laisse respirer la musique pour que le menu « écouter » s'affiche en entier */
+section.musique { overflow: visible; position: relative; z-index: 5; }
+
+/* Livres : couverture entière (le nom d'Adib reste visible), étiquette en bas */
+.produit-image-entiere {
+    background: #2a161e;
+    padding: 1rem;
+}
+.produit-image-entiere img {
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .45));
+}
+.produit-badge {
+    top: auto;
+    bottom: .6rem;
+}
+
+/* ---------- Boutique : une seule scène pour tous les produits ---------- */
+.produit-image,
+.produit-image-entiere {
+    background:
+        radial-gradient(90% 70% at 50% 108%, rgba(239, 111, 34, .38) 0%, rgba(140, 50, 40, .18) 45%, rgba(0, 0, 0, 0) 75%),
+        #24121a;
+    border: 1px solid rgba(255, 178, 135, .10);
+    padding: 12%;
+}
+.produit-image img {
+    object-fit: contain;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .55));
+}
+.produit:hover .produit-image { border-color: rgba(255, 178, 135, .28); }
+
+/* ---------- Spectacles complets : les deux Félix ---------- */
+.special { height: 100%; }
+.special-ecran {
+    position: relative;
+    border-radius: .75rem;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 0 1px rgba(255, 178, 135, .14), 0 24px 50px -20px rgba(0, 0, 0, .9);
+}
+.special-poster { display: block; }
+.special-poster img { display: block; transition: transform .6s ease, filter .6s ease; }
+.special-poster:hover img { transform: scale(1.025); filter: brightness(1.08); }
+.special-en-lecture { aspect-ratio: 16 / 9; }
+.special-ecran iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.special-texte { text-align: center; padding: 1.4rem .5rem 0; }
+.special-felix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    font-size: .74rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    line-height: 1.3;
+}
+.special-felix .laurier { width: 15px; height: 30px; color: var(--site-highlight); flex-shrink: 0; }
+.special-felix .laurier-droite { transform: scaleX(-1); }
+.special-titre {
+    margin: .7rem 0 .35rem;
+    font-style: italic;
+    font-size: 2.2rem;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    color: var(--site-text);
+}
+.special-meta { margin: 0; font-size: .95rem; opacity: .75; }
+.specials-suite { margin: 2.8rem auto 0; max-width: 34em; text-align: center; font-size: 1.3rem; line-height: 1.5; text-wrap: balance; }
+.specials-suite a { color: var(--site-highlight); white-space: nowrap; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(239, 111, 34, .5); text-underline-offset: .2em; }
+.specials-suite a:hover { text-decoration-color: var(--site-highlight); }
+@media (max-width: 575px) {
+    .special-titre { font-size: 1.7rem; }
+    .special-felix { font-size: .64rem; letter-spacing: .14em; }
+}
+
+.titre-aparte { font-size: .6em; opacity: .65; letter-spacing: 0; margin-left: .15em; }
+
+/* ---------- En-tête : nom + disciplines ---------- */
+.marque { display: inline-flex; flex-direction: column; line-height: 1; }
+.marque-disciplines {
+    margin-top: .4rem;
+    font-size: .62rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+    white-space: nowrap;
+}
+@media (max-width: 400px) { .marque-disciplines { font-size: .52rem; letter-spacing: .18em; } }
+
+/* ---------- Bouton Plexus lunaire + lecteur flottant ---------- */
+.bouton-plexus { align-items: center; }
+.bouton-plexus-icone { font-size: .8em; }
+.lecteur-ouvert .bouton-plexus { box-shadow: 0 0 0 2px var(--site-highlight); }
+.bouton-note {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 178, 135, .6);
+    background: transparent;
+    color: var(--site-text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.lecteur-ouvert .bouton-note { background: var(--site-highlight); color: #170A0E; border-color: var(--site-highlight); }
+.lecteur-flottant {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 380px;
+    max-width: calc(100vw - 2.5rem);
+    z-index: 1050;
+    border-radius: 14px;
+    background: #24121a;
+    box-shadow: 0 0 0 1px rgba(255, 178, 135, .25), 0 20px 50px rgba(0, 0, 0, .7);
+    animation: lecteur-entree .35s ease;
+}
+.lecteur-flottant iframe { display: block; border: 0; border-radius: 12px; }
+.lecteur-flottant-fermer {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 178, 135, .5);
+    background: #170A0E;
+    color: var(--site-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 2;
+}
+@keyframes lecteur-entree { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@media (max-width: 575px) {
+    .lecteur-flottant { right: .75rem; left: .75rem; bottom: .75rem; width: auto; max-width: none; }
+}
+
+/* ---------- Pied de page : Dar Alkhalidey ---------- */
+.dar { text-align: center; padding: 3.5rem 0 3rem; }
+.dar-nom {
+    margin: 0;
+    font-style: italic;
+    font-size: 3.2rem;
+    line-height: 1;
+    letter-spacing: -1.5px;
+    color: var(--site-text);
+}
+.dar-disciplines {
+    margin: .9rem 0 0;
+    font-size: .74rem;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--site-highlight);
+}
+@media (max-width: 575px) { .dar-nom { font-size: 2.4rem; } .dar-disciplines { font-size: .62rem; letter-spacing: .2em; } }
+
+/* Tous les boutons du site : survol cuivré au lieu du gris/blanc de Bootstrap */
+.btn-light,
+.btn-outline-light { transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
+.btn-light:hover,
+.btn-light:focus-visible,
+.btn-light:active,
+.btn-light.active,
+.btn-outline-light:hover,
+.btn-outline-light:focus-visible,
+.btn-outline-light:active,
+.btn-outline-light.active {
+    background-color: var(--site-highlight) !important;
+    border-color: var(--site-highlight) !important;
+    color: #170A0E !important;
+}
+
+/* ---------- Affiche : fondu doux vers le fond du site ---------- */
+/* Ordinateur : le fondu est intégré à l'image (hero-2026-fondu.jpg), sur les quatre côtés. Téléphone : fondu en haut et en bas. */
+.hero-fondu img.d-md-none {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 62%, rgba(0, 0, 0, .55) 82%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 6%, #000 62%, rgba(0, 0, 0, .55) 82%, transparent 100%);
+}
+
+/* Dar Alkhalidey : la maison dessinée avec le vocabulaire du diagramme de l'affiche */
+.dar-maison { display: block; width: 100%; max-width: 640px; height: auto; margin: 0 auto; color: rgba(255, 178, 135, .72); overflow: visible; }
+.dar-double { opacity: .55; }
+.dar-texte { fill: var(--site-text); font-family: inherit; font-style: italic; font-size: 58px; letter-spacing: -1.5px; }
+.dar-maison + .dar-disciplines { margin-top: 1.4rem; }
+@media (prefers-reduced-motion: no-preference) {
+    .dar-fleche-haut { animation: dar-haut 3.2s ease-in-out infinite; }
+    .dar-fleche-bas { animation: dar-bas 3.2s ease-in-out infinite; }
+}
+@keyframes dar-haut { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+@keyframes dar-bas { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+/* Menus « écouter » : déroulé fluide. Seuls transform et opacity sont animés (calculés par la carte graphique, donc sans saccade). */
+.ecouter-menu {
+    transform-origin: top left;
+    background: rgba(36, 18, 26, .97);
+    overflow: hidden;
+    will-change: transform, opacity;
+}
+.ecouter-menu a { position: relative; z-index: 1; transition: color .25s ease; }
+.ecouter-menu a:hover { background: transparent; }
+.ecouter-surbrillance {
+    position: absolute;
+    left: .4rem;
+    right: .4rem;
+    top: 0;
+    height: 0;
+    border-radius: .35rem;
+    background: rgba(239, 111, 34, .2);
+    opacity: 0;
+    pointer-events: none;
+    will-change: transform;
+    transition: transform .4s cubic-bezier(.16, 1, .3, 1), opacity .2s ease;
+}
+.ecouter-fleche { transition: transform .5s cubic-bezier(.16, 1, .3, 1) !important; }
+.ecouter[open] .ecouter-menu { animation: ecouter-ouvre .45s cubic-bezier(.16, 1, .3, 1) both; }
+.ecouter[open] .ecouter-menu a { animation: ecouter-lien .5s cubic-bezier(.16, 1, .3, 1) both; animation-delay: .04s; }
+.ecouter[open] .ecouter-menu a:nth-of-type(2) { animation-delay: .08s; }
+.ecouter[open] .ecouter-menu a:nth-of-type(3) { animation-delay: .12s; }
+.ecouter[open] .ecouter-menu a:nth-of-type(4) { animation-delay: .16s; }
+.ecouter.ecouter-ferme .ecouter-menu { animation: ecouter-ferme .22s cubic-bezier(.4, 0, 1, 1) both; }
+.ecouter.ecouter-ferme .ecouter-fleche { transform: rotate(0deg); }
+@keyframes ecouter-ouvre {
+    from { opacity: 0; transform: translate3d(0, -10px, 0) scale(.96); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes ecouter-ferme {
+    from { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    to   { opacity: 0; transform: translate3d(0, -6px, 0) scale(.97); }
+}
+@keyframes ecouter-lien {
+    from { opacity: 0; transform: translate3d(0, -8px, 0); }
+    to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ecouter[open] .ecouter-menu, .ecouter[open] .ecouter-menu a, .ecouter.ecouter-ferme .ecouter-menu { animation: none; }
+    .ecouter-surbrillance { transition: none; }
+}
+
+/* Boutons pleins : orange au repos (ça attire l'œil), pêche au survol */
+.btn-light {
+    background-color: var(--site-highlight) !important;
+    border-color: var(--site-highlight) !important;
+    color: #170A0E !important;
+}
+.btn-light:hover,
+.btn-light:focus-visible,
+.btn-light:active,
+.btn-light.active {
+    background-color: var(--site-text) !important;
+    border-color: var(--site-text) !important;
+    color: #170A0E !important;
+}
+
+/* Pont invisible entre le bouton et le menu, pour que le survol ne se perde pas dans l'espace entre les deux */
+.ecouter[open]::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: .6rem; }
+
+/* Biographie complète : déroulé en douceur */
+.bio-suite-contenu { overflow: hidden; padding-top: 1.5rem; }
+.bio-refermer { display: none; }
+.bio-suite[open] .bio-lire { display: none; }
+.bio-suite[open] .bio-refermer { display: inline; }
+.bio-suite summary, .bio-suite-fin { transition: background-color .25s ease, border-color .25s ease, color .25s ease; }
+.bio-suite-fin {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: .55rem 1.2rem;
+    border: 1px solid var(--site-text);
+    border-radius: .375rem;
+    background: transparent;
+    color: var(--site-text);
+    font-size: 1.1rem;
+}
+.bio-suite-fin:hover { background: var(--site-highlight); border-color: var(--site-highlight); color: var(--site-background); }

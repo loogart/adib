@@ -5,6 +5,10 @@
    ========================================================== */
 
 /* ---------- 0. Ouverture : les lumières de la salle montent, le titre s'écrit ---------- */
+/* Decorative orbits and stamp animations must not widen the viewport.
+   clip preserves the document scrolling used by the sticky scenes. */
+html, body { overflow-x: clip; }
+
 .scene { position: relative; }
 .scene-titre { position: absolute; }
 .scene-desk .scene-titre { left: 14.946%; top: 10.851%; width: 25.815%; height: 80.551%; }
@@ -508,6 +512,7 @@ body .boutique-tout:hover { background-size: 0% 1px; background-position: right 
 .vedette-pochette.vu img { transform: translateX(-5%); }
 .vedette-pochette.vu .disque-etiquette { animation-play-state: running; }
 @media (max-width: 767px) {
+    .vedette-pochette .disque { width: 88%; }
     .vedette-pochette.vu .disque { transform: translateX(9%); }
     .vedette-pochette.vu img { transform: translateX(-6%); }
 }
@@ -586,6 +591,13 @@ body .boutique-tout:hover { background-size: 0% 1px; background-position: right 
     .album.vu .album-pochette .disque { transform: translateX(18%); }
     .discos .album-titre { font-size: 1.3rem; }
     .discos .album > :not(.album-pochette) { position: relative; z-index: 3; }
+    .discos .ecouter { position: static; }
+    body .discos .ecouter-menu {
+        left: auto;
+        right: 0;
+        width: min(270px, calc(100vw - 24px));
+        min-width: 0;
+    }
 }
 
 /* ---------- « Le prochain » : le titre de l'affiche, au défilement ---------- */
@@ -886,6 +898,17 @@ body .bouton-note.plexus-disque, body .bouton-note.plexus-disque:hover { border:
 .bouton-note .md-pause path { stroke: #170A0E; }
 .bouton-note .md-pointille { border-color: var(--site-highlight); }
 .lecteur-ouvert .bouton-note { background: none; }
+
+/* Keep the mobile controls and their orbit inside the header. */
+@media (max-width: 767.98px) {
+    .nav-entete { gap: .75rem; }
+    .nav-entete .marque { min-width: 0; }
+    .nav-entete .logo { font-size: clamp(1.35rem, 6vw, 2rem); }
+    .nav-entete .marque-disciplines { white-space: normal; line-height: 1.3; }
+    .nav-actions { flex-shrink: 0; gap: .5rem !important; }
+    .nav-actions .btn { padding-inline: .75rem; }
+    .nav-actions .bouton-note { flex-shrink: 0; }
+}
 
 /* ---------- Menu des plateformes ---------- */
 body .ecouter-menu {

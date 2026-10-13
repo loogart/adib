@@ -1,8 +1,39 @@
 RewriteEngine on
 
+# --- Anciens sites (2022, 2024, 2025) : redirigés pour toujours vers le site actuel (ajouté le 12 oct. 2026) ---
+# Les vieux liens continuent de marcher et mènent à la tournée. Les fichiers restent dans le dépôt : retirer ces 2 lignes pour annuler.
+RewriteRule ^(2022|2024|2025)/infolettre(\.html)?$ /infolettre [R=301,L,NC]
+RewriteRule ^(2022|2024|2025)(/.*)?$ / [R=301,L,NC]
+# --- fin ---
+
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# --- adibalkhalidey.com : chaque mise en ligne visible tout de suite (ajouté le 9 oct. 2026) ---
+# Les pages, styles et scripts sont toujours revérifiés auprès du serveur (rapide : si rien n'a changé, rien n'est retéléchargé).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm|css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
+# --- fin ---
+
+# --- Sécurité (ajouté le 13 oct. 2026) : en-têtes standards, sans effet visible sur le site ---
+# HSTS : le navigateur ne parlera plus qu'en https au site. nosniff : un fichier est lu pour ce qu'il est.
+# SAMEORIGIN : personne ne peut afficher le site dans un cadre caché sur un autre site (vol de clics).
+# Pour annuler : retirer ce bloc.
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+</IfModule>
+# --- fin ---
